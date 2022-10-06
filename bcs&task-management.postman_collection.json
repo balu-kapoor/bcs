@@ -1,0 +1,1289 @@
+{
+	"info": {
+		"_postman_id": "8f898220-5366-44d6-b304-c73b00595186",
+		"name": "bcs&task-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "admin login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"admin@gmail.com\",\n    \"password\":\"1234567\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/auth/login/admin",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"auth",
+								"login",
+								"admin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "admin login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"admin@gmail.com\",\n    \"password\":\"1234567\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/auth/login/admin",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"auth",
+										"login",
+										"admin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "315"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13b-ulGaARqk2fK2z9OAkc4wJHtYAoA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jun 2021 17:30:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjA2OTZkY2U1MzA4NGExYzNhZTdkOWIxIiwiaWF0IjoxNjIzNzc4MjAzfQ.PfFpcHLCAkGIFF5qfW4gmXQWQJl_IqP1SvwUlg0Pbh8\",\n        \"_id\": \"60696dce53084a1c3ae7d9b1\",\n        \"profile_url\": \"http://52.56.53.165:443/uploads/profile/profile1619527967537.jpg\",\n        \"name\": \"admin\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "employee login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"rrdw58rdpo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/auth/login/employee",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"auth",
+								"login",
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employee logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/api/front/employee",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"front",
+								"employee"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "jobs-modules",
+			"item": [
+				{
+					"name": "get employee dropdown list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/api/admin/jobs/employeeList?contractId=60893cc10f15712eeac912de",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"jobs",
+								"employeeList"
+							],
+							"query": [
+								{
+									"key": "contractId",
+									"value": "60893cc10f15712eeac912de"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get employee dropdown list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASEURL}}/api/admin/jobs/employeeList?contractId=60893cc10f15712eeac912de",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"jobs",
+										"employeeList"
+									],
+									"query": [
+										{
+											"key": "contractId",
+											"value": "60893cc10f15712eeac912de"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "228"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e4-z08cfdUlLGFabDP68++q7uSlc5Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jun 2021 13:17:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"List of employee \",\n    \"data\": [\n        {\n            \"_id\": \"60893cc10f15712eeac912de\",\n            \"name\": \"Ground maintanance\",\n            \"employee\": [\n                {\n                    \"_id\": \"60893cc10f15712eeac912df\",\n                    \"value\": {\n                        \"_id\": \"608258132057f925a147acff\",\n                        \"firstName\": \"hello\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get service dropdown list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/api/admin/jobs/serviceList?contractId=60893cc10f15712eeac912de",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"jobs",
+								"serviceList"
+							],
+							"query": [
+								{
+									"key": "contractId",
+									"value": "60893cc10f15712eeac912de"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get contract dropdown list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/api/admin/jobs/contracList",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"jobs",
+								"contracList"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get contract dropdown list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASEURL}}/api/admin/jobs/contracList",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"jobs",
+										"contracList"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "167"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a7-8cMLOG1Sml9Bn6jzI3ESi5iu8uo\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jun 2021 13:21:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"List of contracts \",\n    \"data\": [\n        {\n            \"_id\": \"60893cc10f15712eeac912de\",\n            \"name\": \"Ground maintanance\"\n        },\n        {\n            \"_id\": \"608978fd8e1b795b151d5cc2\",\n            \"name\": \"test\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get jobs listing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lenght\":\"20\",\n    \"start\" :\"0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/admin/jobs/listing",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"jobs",
+								"listing"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get jobs listing",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"lenght\":\"20\",\n    \"start\" :\"0\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/api/admin/jobs/listing",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"jobs",
+										"listing"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4343"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10f7-iuDiRvBCA6fc8yg3v2GpLwfNz2w\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Jun 2021 12:10:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Records found\",\n    \"data\": {\n        \"records\": [\n            {\n                \"jobType\": \"repeat\",\n                \"isDaily\": 0,\n                \"repeatDays\": [\n                    \"monday\",\n                    \"saturday\"\n                ],\n                \"created_at\": \"2021-06-10T05:57:55.954Z\",\n                \"status\": 0,\n                \"modified_at\": \"2021-06-10T05:57:55.954Z\",\n                \"_id\": \"60c1aa72ef7db83414bafb43\",\n                \"employeeId\": {\n                    \"employeeId\": \"gcexvhgssx\",\n                    \"_id\": \"608258132057f925a147acff\",\n                    \"firstName\": \"hello\"\n                },\n                \"contractId\": {\n                    \"startDate\": null,\n                    \"endDate\": null,\n                    \"isDone\": 1,\n                    \"isIssue\": 1,\n                    \"created_at\": \"2021-04-28T10:44:30.695Z\",\n                    \"status\": 0,\n                    \"modified_at\": \"2021-04-28T10:44:30.695Z\",\n                    \"_id\": \"60893cc10f15712eeac912de\",\n                    \"name\": \"Ground maintanance\",\n                    \"clientId\": \"608258f4f38c91264b8c36d2\",\n                    \"employee\": [\n                        {\n                            \"_id\": \"60893cc10f15712eeac912df\",\n                            \"value\": \"608258132057f925a147acff\"\n                        }\n                    ],\n                    \"service\": [\n                        {\n                            \"_id\": \"60893cc10f15712eeac912e0\",\n                            \"value\": \"6082c84d112e82519e13a438\"\n                        }\n                    ],\n                    \"startTime\": \"10:00\",\n                    \"date\": \"2021-04-30T00:00:00.000Z\",\n                    \"address\": \"new colony, east villa ,delhi\",\n                    \"description\": \"sssssddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd\",\n                    \"__v\": 0\n                },\n                \"serviceId\": {\n                    \"created_at\": \"2021-04-22T05:24:36.906Z\",\n                    \"status\": 1,\n                    \"modified_at\": \"2021-04-22T05:24:36.906Z\",\n                    \"_id\": \"608108b836721f2b7afe32a1\",\n                    \"name\": \"Wash \",\n                    \"description\": \"sdsdsdsdsd\",\n                    \"__v\": 0,\n                    \"duration\": 3\n                }\n            },\n            {\n                \"jobType\": \"repeat\",\n                \"isDaily\": 0,\n                \"repeatDays\": [\n                    \"monday\",\n                    \"thursday\"\n                ],\n                \"created_at\": \"2021-06-10T05:57:55.954Z\",\n                \"status\": 0,\n                \"modified_at\": \"2021-06-10T05:57:55.954Z\",\n                \"_id\": \"60c1aa8fef7db83414bafb44\",\n                \"employeeId\": {\n                    \"employeeId\": \"gcexvhgssx\",\n                    \"_id\": \"608258132057f925a147acff\",\n                    \"firstName\": \"hello\"\n                },\n                \"contractId\": {\n                    \"startDate\": null,\n                    \"endDate\": null,\n                    \"isDone\": 1,\n                    \"isIssue\": 1,\n                    \"created_at\": \"2021-04-28T10:44:30.695Z\",\n                    \"status\": 0,\n                    \"modified_at\": \"2021-04-28T10:44:30.695Z\",\n                    \"_id\": \"60893cc10f15712eeac912de\",\n                    \"name\": \"Ground maintanance\",\n                    \"clientId\": \"608258f4f38c91264b8c36d2\",\n                    \"employee\": [\n                        {\n                            \"_id\": \"60893cc10f15712eeac912df\",\n                            \"value\": \"608258132057f925a147acff\"\n                        }\n                    ],\n                    \"service\": [\n                        {\n                            \"_id\": \"60893cc10f15712eeac912e0\",\n                            \"value\": \"6082c84d112e82519e13a438\"\n                        }\n                    ],\n                    \"startTime\": \"10:00\",\n                    \"date\": \"2021-04-30T00:00:00.000Z\",\n                    \"address\": \"new colony, east villa ,delhi\",\n                    \"description\": \"sssssddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd\",\n                    \"__v\": 0\n                },\n                \"serviceId\": {\n                    \"created_at\": \"2021-04-22T05:24:36.906Z\",\n                    \"status\": 1,\n                    \"modified_at\": \"2021-04-22T05:24:36.906Z\",\n                    \"_id\": \"608108b836721f2b7afe32a1\",\n                    \"name\": \"Wash \",\n                    \"description\": \"sdsdsdsdsd\",\n                    \"__v\": 0,\n                    \"duration\": 3\n                }\n            },\n            {\n                \"jobType\": \"repeat\",\n                \"isDaily\": 0,\n                \"repeatDays\": [\n                    \"monday,thursday\"\n                ],\n                \"created_at\": \"2021-06-09T06:25:05.794Z\",\n                \"status\": 1,\n                \"modified_at\": \"2021-06-09T06:25:05.794Z\",\n                \"_id\": \"60c05ee9642141452250529d\",\n                \"employeeId\": {\n                    \"employeeId\": \"gcexvhgssx\",\n                    \"_id\": \"608258132057f925a147acff\",\n                    \"firstName\": \"hello\"\n                },\n                \"contractId\": {\n                    \"startDate\": \"2021-06-09T00:00:00.000Z\",\n                    \"endDate\": null,\n                    \"isDone\": 1,\n                    \"isIssue\": 0,\n                    \"created_at\": \"2021-04-28T15:01:57.695Z\",\n                    \"status\": 0,\n                    \"modified_at\": \"2021-04-28T15:01:57.695Z\",\n                    \"_id\": \"608978fd8e1b795b151d5cc2\",\n                    \"name\": \"test\",\n                    \"clientId\": \"6086d10d36725b6351f93fba\",\n                    \"employee\": [\n                        {\n                            \"_id\": \"608978fd8e1b795b151d5cc3\",\n                            \"value\": \"608258132057f925a147acff\"\n                        }\n                    ],\n                    \"service\": [\n                        {\n                            \"_id\": \"608978fd8e1b795b151d5cc4\",\n                            \"value\": \"6082c84d112e82519e13a438\"\n                        }\n                    ],\n                    \"startTime\": \"00:30\",\n                    \"__v\": 0\n                },\n                \"serviceId\": {\n                    \"created_at\": \"2021-04-22T05:24:36.906Z\",\n                    \"status\": 1,\n                    \"modified_at\": \"2021-04-22T05:24:36.906Z\",\n                    \"_id\": \"608108b836721f2b7afe32a1\",\n                    \"name\": \"Wash \",\n                    \"description\": \"sdsdsdsdsd\",\n                    \"__v\": 0,\n                    \"duration\": 3\n                }\n            },\n            {\n                \"jobType\": \"\",\n                \"isDaily\": 0,\n                \"repeatDays\": [\n                    \"monday\"\n                ],\n                \"created_at\": \"2021-06-08T08:46:06.671Z\",\n                \"status\": 1,\n                \"modified_at\": \"2021-06-08T08:46:06.671Z\",\n                \"_id\": \"60bf2e5a1685362a03ba88a5\",\n                \"employeeId\": {\n                    \"employeeId\": \"gcexvhgssx\",\n                    \"_id\": \"608258132057f925a147acff\",\n                    \"firstName\": \"hello\"\n                },\n                \"contractId\": {\n                    \"startDate\": null,\n                    \"endDate\": null,\n                    \"isDone\": 1,\n                    \"isIssue\": 1,\n                    \"created_at\": \"2021-04-28T10:44:30.695Z\",\n                    \"status\": 0,\n                    \"modified_at\": \"2021-04-28T10:44:30.695Z\",\n                    \"_id\": \"60893cc10f15712eeac912de\",\n                    \"name\": \"Ground maintanance\",\n                    \"clientId\": \"608258f4f38c91264b8c36d2\",\n                    \"employee\": [\n                        {\n                            \"_id\": \"60893cc10f15712eeac912df\",\n                            \"value\": \"608258132057f925a147acff\"\n                        }\n                    ],\n                    \"service\": [\n                        {\n                            \"_id\": \"60893cc10f15712eeac912e0\",\n                            \"value\": \"6082c84d112e82519e13a438\"\n                        }\n                    ],\n                    \"startTime\": \"10:00\",\n                    \"date\": \"2021-04-30T00:00:00.000Z\",\n                    \"address\": \"new colony, east villa ,delhi\",\n                    \"description\": \"sssssddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd\",\n                    \"__v\": 0\n                },\n                \"serviceId\": {\n                    \"created_at\": \"2021-04-22T05:24:36.906Z\",\n                    \"status\": 1,\n                    \"modified_at\": \"2021-04-22T05:24:36.906Z\",\n                    \"_id\": \"608108b836721f2b7afe32a1\",\n                    \"name\": \"Wash \",\n                    \"description\": \"sdsdsdsdsd\",\n                    \"__v\": 0,\n                    \"duration\": 3\n                }\n            }\n        ],\n        \"recordsFiltered\": 4,\n        \"recordsTotal\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create new job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"employeeId\":\"608258132057f925a147acff\",\n\"contractId\":\"60893cc10f15712eeac912de\",\n\"serviceId\":\"608108b836721f2b7afe32a1\",\n\"jobType\":\"repeat\",\n\"isDaily\":0,\n\"repeatDays\":[\"monday\", \"thursday\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/admin/jobs/add",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"jobs",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get service dropdown list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/api/admin/contracts/get/servicelist",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"contracts",
+								"get",
+								"servicelist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "employee dashboard",
+			"item": [
+				{
+					"name": "get last login , completed task , pending task , working hour",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/api/front/employee/dashboard/count?id=608258132057f925a147acff",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"front",
+								"employee",
+								"dashboard",
+								"count"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "608258132057f925a147acff"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get open  tasks listing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/api/front/employee/open/task?id=608258132057f925a147acff",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"front",
+								"employee",
+								"open",
+								"task"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "608258132057f925a147acff"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get open  tasks listing",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASEURL}}/api/front/employee/open/task?id=608258132057f925a147acff",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"api",
+										"front",
+										"employee",
+										"open",
+										"task"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "608258132057f925a147acff"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "345"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"159-5WsT56hxBE+vHxWWl/YUzfz8WLo\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Jun 2021 06:15:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Employee task details\",\n    \"statusCode\": 200,\n    \"data\": [\n        {\n            \"_id\": \"60bf2e5a1685362a03ba88a5\",\n            \"contractId\": {\n                \"startDate\": null,\n                \"endDate\": null,\n                \"_id\": \"60893cc10f15712eeac912de\",\n                \"name\": \"Ground maintanance\",\n                \"address\": \"new colony, east villa ,delhi\",\n                \"description\": \"sssssddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get active tasks list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/api/front/employee/active/task?id=608258132057f925a147acff",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"front",
+								"employee",
+								"active",
+								"task"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "608258132057f925a147acff"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get open  tasks listing Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASEURL}}/api/front/employee/active/task?id=608258132057f925a147acff",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"api",
+										"front",
+										"employee",
+										"active",
+										"task"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "608258132057f925a147acff"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "281"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"119-obLVFbAO+XbrqnqT+a3B5m+jt0g\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Jun 2021 07:06:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Employee open task list\",\n    \"statusCode\": 200,\n    \"data\": [\n        {\n            \"_id\": \"60bf2e5a1685362a03ba88a5\",\n            \"contractId\": null\n        },\n        {\n            \"_id\": \"60c05ee9642141452250529d\",\n            \"contractId\": {\n                \"startDate\": \"2021-06-09T00:00:00.000Z\",\n                \"endDate\": null,\n                \"_id\": \"608978fd8e1b795b151d5cc2\",\n                \"name\": \"test\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get completed task lists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/api/front/employee/completed/task/list?id=608258132057f925a147acff",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"front",
+								"employee",
+								"completed",
+								"task",
+								"list"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "608258132057f925a147acff"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get task details by task id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/api/front/employee/task/details?taskId=60bf2e5a1685362a03ba88a5",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"front",
+								"employee",
+								"task",
+								"details"
+							],
+							"query": [
+								{
+									"key": "taskId",
+									"value": "60bf2e5a1685362a03ba88a5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get task details by task id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASEURL}}/api/front/employee/task/details?taskId=60bf2e5a1685362a03ba88a5",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"api",
+										"front",
+										"employee",
+										"task",
+										"details"
+									],
+									"query": [
+										{
+											"key": "taskId",
+											"value": "60bf2e5a1685362a03ba88a5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "317"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13d-y8HAEkbP7kGk4oNkcDxGMC5lvro\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Jun 2021 06:12:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Task details\",\n    \"data\": {\n        \"_id\": \"60bf2e5a1685362a03ba88a5\",\n        \"contractId\": {\n            \"startDate\": null,\n            \"endDate\": null,\n            \"_id\": \"60893cc10f15712eeac912de\",\n            \"name\": \"Ground maintanance\",\n            \"address\": \"new colony, east villa ,delhi\",\n            \"description\": \"sssssddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "task signoff & reports",
+			"item": [
+				{
+					"name": "signoff task",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "comment",
+									"value": "dfdfdfdfdfd",
+									"type": "text"
+								},
+								{
+									"key": "photos",
+									"type": "file",
+									"src": [
+										"/home/manish/Desktop/images sample/images (3).jpeg",
+										"/home/manish/Desktop/images sample/images (2).jpeg"
+									]
+								},
+								{
+									"key": "taskId",
+									"value": "60c9c4f4c902de4e30f353d6",
+									"type": "text"
+								},
+								{
+									"key": "employeeId",
+									"value": "60c05ee9642141452250529d",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "startTime",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "endTime",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/front/employee/task/signoff",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"front",
+								"employee",
+								"task",
+								"signoff"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signoff task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "comment",
+											"value": "dfdfdfdfdfd",
+											"type": "text"
+										},
+										{
+											"key": "photos",
+											"type": "file",
+											"src": "/home/manish/Desktop/images sample/images (9).jpeg"
+										},
+										{
+											"key": "taskId",
+											"value": "60c05ee9642141452250529d",
+											"type": "text"
+										},
+										{
+											"key": "employeeId",
+											"value": "60c05ee9642141452250529d",
+											"type": "text"
+										},
+										{
+											"key": "startTime",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "endTime",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/api/front/employee/task/signoff",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"api",
+										"front",
+										"employee",
+										"task",
+										"signoff"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"46-BT9uf7cMbTdbL3LHRxxIOJJ24ZE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jun 2021 07:43:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Task has been signed off.\",\n    \"statusCode\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "report issue task",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "multipart/form-data"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "reportTitle",
+									"value": "something errors",
+									"type": "text"
+								},
+								{
+									"key": "photos",
+									"type": "file",
+									"src": [
+										"/home/manish/Desktop/images sample/download (3).jpeg",
+										"/home/manish/Desktop/images sample/download (2).jpeg",
+										"/home/manish/Desktop/images sample/download (1).jpeg"
+									]
+								},
+								{
+									"key": "taskId",
+									"value": "60c9c4f4c902de4e30f353d6",
+									"type": "text"
+								},
+								{
+									"key": "employeeId",
+									"value": "60c05ee9642141452250529d",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "startTime",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "endTime",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "reportDescription",
+									"value": "asasashhhhhhhhhhhhhhsasasasasa",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/front/employee/task/report",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"front",
+								"employee",
+								"task",
+								"report"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "report issue task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "multipart/form-data"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "reportTitle",
+											"value": "something errors",
+											"type": "text"
+										},
+										{
+											"key": "photos",
+											"type": "file",
+											"src": [
+												"/home/manish/Desktop/images sample/images (9).jpeg",
+												"/home/manish/Desktop/images sample/images (8).jpeg"
+											]
+										},
+										{
+											"key": "taskId",
+											"value": "60bf2e5a1685362a03ba88a5",
+											"type": "text"
+										},
+										{
+											"key": "employeeId",
+											"value": "60c05ee9642141452250529d",
+											"type": "text"
+										},
+										{
+											"key": "startTime",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "endTime",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "reportDescription",
+											"value": "asasashhhhhhhhhhhhhhsasasasasa",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/api/front/employee/task/report",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"api",
+										"front",
+										"employee",
+										"task",
+										"report"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-+lCjEzn7urRUKCb8ecgdDYZiHX0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jun 2021 07:48:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Task has been reported.\",\n    \"statusCode\": 200\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{token}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "tokenkey",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjAxYjk3Mjk1NDFmNTUwYjVjZWM3YWJhIiwiaWF0IjoxNjE5MDY1MjIwfQ.6Bt3jy6xidlYFlKddvVh2jGdxMYkU9zipSty10AKjYQ"
+		},
+		{
+			"key": "BASEURL",
+			"value": "http://localhost:8000"
+		}
+	]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "bcs_api",
+  "version": "1.0.0",
+  "description": "bcs_backend_api",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "clone": "^2.1.2",
+    "cors": "^2.8.5",
+    "date-and-time": "^0.14.2",
+    "dateformat": "^4.5.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-validator": "^5.3.0",
+    "formidable": "^1.2.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.0",
+    "nodemon": "^2.0.7"
+  }
+}
